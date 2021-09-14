@@ -42,6 +42,25 @@ Example 1: 180 Degree Clockwise
            [3,2,1]]
 */
 
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        
+        for(int i=0; i<matrix.size(); i++)
+        {
+            reverse(matrix[i].begin(), matrix[i].end());
+        }
+        int r = matrix.size(), c = matrix[0].size();
+        for (int i = 0; i < c; i++)
+        {
+            for (int j = 0, k = c - 1; j < k; j++, k--)
+            { 
+                swap(matrix[j][i], matrix[k][i]);
+            }
+        }
+    }
+};
+
 /*
 Example 1: 270 Degree Clockwise
   Input: matrix = [[1,2,3],      -> complement
@@ -51,3 +70,24 @@ Example 1: 270 Degree Clockwise
            [2,5,8],
            [1,4,7]]
 */
+
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        for(int i=0; i<matrix.size(); i++)
+        {
+            for(int j=i; j<matrix.size(); j++)
+            {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+        int r = matrix.size(), c = matrix[0].size();
+        for (int i = 0; i < c; i++)
+        {
+            for (int j = 0, k = c - 1; j < k; j++, k--)
+            { 
+                swap(matrix[j][i], matrix[k][i]);
+            }
+        }
+    }
+};
