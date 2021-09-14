@@ -91,3 +91,32 @@ public:
         }
     }
 };
+
+
+======================================================
+/*
+Example 1: 90 Degree AntiClockwise same as 270 Degree Clockwise
+  Input: matrix = [[1,2,3],      -> complement
+                   [4,5,6],      -> Replace row 1 with 3rd using two pointer
+                   [7,8,9]]
+  Output: [[3,6,9],
+           [2,5,8],
+           [1,4,7]]
+
+Example 2: 180 Degree AntiClockwise same as 180 Degree Clockwise
+  Input: matrix = [[1,2,3],      -> Replace column 1 with 3rd using two pointer
+                   [4,5,6],      -> Replace row 1 with 3rd using two pointer
+                   [7,8,9]]
+  Output: [[9,8,7],
+           [6,5,4],
+           [3,2,1]]
+           
+Example 3: 270 Degree AntiClockwise is same as 90 Degree Clockwise
+  Input: matrix = [[1,2,3],      -> complement all edge element except diagonal element.
+                   [4,5,6],      -> Replace column 1 with 3rd
+                   [7,8,9]]
+  Output: [[7,4,1],
+           [8,5,2],
+           [9,6,3]]
+*/
+
