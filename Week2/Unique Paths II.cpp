@@ -13,7 +13,7 @@ Example 1:
     2. Down -> Down -> Right -> Right
 */
 
-/* Approach: Complexity - O(N*1) - Dynamic Programming*/
+/* Approach: Complexity - O(R*C) - Dynamic Programming*/
 
 class Solution {
 public:
